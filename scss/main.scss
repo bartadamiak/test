@@ -12,6 +12,10 @@ $darkGr: rgb(135,135,135);
     box-sizing: border-box;
 }
 
+.green {
+    color: $color1;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -147,7 +151,7 @@ $darkGr: rgb(135,135,135);
     input {
         border-radius: 5px;
         outline: none;
-        border: 1px solid gray;
+        border: 1px solid $darkGr;
         width: 80%;
         height: 3em;
         background: $darkBG;
@@ -159,7 +163,7 @@ $darkGr: rgb(135,135,135);
     select {
         border-radius: 5px;
         outline: none;
-        border: 1px solid gray;
+        border: 1px solid $darkGr;
         width: 80%;
         height: 3em;
         background: white;
@@ -189,4 +193,50 @@ $darkGr: rgb(135,135,135);
     }
 }
 
+@media (max-width:1030px) {
+    .circle1::before {
+       
+        width: 700%;
+        left: -750%;
+    }
+    
+    .circle1::after {
+        
+        width: 700%;
+        right: -750%;
+    
+    }
 
+}
+
+@media (max-width: 830px) {
+    .circle1::before {
+       
+        width: 600%;
+        
+        left: -700%;
+    }
+    
+    .circle1::after {
+        
+        width: 600%;
+        
+        right: -700%;
+    
+    }
+}
+
+@media (max-width: 768px) {
+    .circle1::before {
+       display: none;
+    }
+    
+    .circle1::after {
+        display: none;
+    }
+
+    .first-bottom {
+        padding: 5%;
+    }
+   
+}
