@@ -2,6 +2,9 @@
 
 $color1: rgb(0,171,206);
 $darkBG: rgb(244,244,244);
+$color2: rgb(0,186,144);
+$lightGr: rgb(228,228,228);
+$darkGr: rgb(135,135,135);
 
 * {
     margin: 0;
@@ -22,19 +25,168 @@ $darkBG: rgb(244,244,244);
 
 .first-bottom {
     background: $darkBG;
+    position: relative;
+    
 }
+
+
 
 .title {
     text-align: center;
+    font-size: 1.5em;
+    h1 {
+        font-size: 1em;
+        display: inline;
+    }
+    
 }
 
 .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 3%;
+    i {
+        color: $color1;
+        
+    }
+}
+
+.circle {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: $color1;
     text-align: center;
+    padding: auto;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    
+}
+
+.circleGr {
+    background: $lightGr;
+}
+
+.circle1 {
+    position: relative;
+}
+
+.circle1::before {
+    content: "";
+    display: inline-block;
+    width: 700%;
+    height: 5px;
+    background: $color1;
+    position: absolute;
+    top: 45%;
+    left: -950%;
+}
+
+.circle1::after {
+    content: "";
+    display: inline-block;
+    width: 700%;
+    height: 5px;
+    background: $lightGr;
+    position: absolute;
+    top: 45%;
+    right: -950%;
+
+}
+
+.text {
+    text-align: center;
+    .step {
+        margin-top: 20px;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
 }
 
 .second-top {
+    padding: 3% 10%;
     text-align: center;
+    line-height: 2;
+    font-size: 1.3em
 }
+
+
+
+///////////// form \\\\\\\\\\\\\\\\\
+
+.form-title {
+    margin: 2% 0;
+}
+
+.form-title-top {
+    color: $color1;
+    font-size: 1.5em;
+    font-weight: 600
+}
+
+.form-title-bottom {
+    color: $darkGr;
+    font-weight: 600;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    label {
+        font-size: 1.2em;
+        display: inline-block;
+        width: 20%;
+        margin: 0 5%;
+        margin-top: 2%;
+    }
+    input {
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid gray;
+        width: 80%;
+        height: 3em;
+        background: $darkBG;
+        padding-bottom: 3%;
+        padding-left: 1%;
+        
+    }
+
+    select {
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid gray;
+        width: 80%;
+        height: 3em;
+        background: white;
+        padding: auto 3%;
+    }
+    .button {
+        width: 100%;
+        text-align: right;
+    }
+    .btn {
+        text-align: center;
+        border-radius: 10px;
+        width: 50%;
+        background: rgb(0,186,144);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: white;
+        .btn-top {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 5px auto;
+        }
+        .btn-bottom {
+        margin: 5px auto;
+        }
+    }
+}
+
+
