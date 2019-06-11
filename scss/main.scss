@@ -1,0 +1,40 @@
+@import "grid.scss";
+
+$color1: rgb(0,171,206);
+$darkBG: rgb(244,244,244);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.first-top {
+    background: $color1;
+    color: white;
+}
+
+.first-bottom {
+    background: $darkBG;
+}
+
+.title {
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.second-top {
+    text-align: center;
+}
